@@ -155,6 +155,7 @@ export default class AppIntroSlider extends React.Component {
           data={cloneDeep(this.props.slides)}
           horizontal
           pagingEnabled
+          scrollEnabled={this.props.scrollEnabled}
           showsHorizontalScrollIndicator={false}
           bounces={false}
           style={styles.flexOne}
