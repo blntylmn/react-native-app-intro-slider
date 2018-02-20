@@ -9,6 +9,7 @@ import {
   Platform,
   StatusBar,
 } from 'react-native';
+import { cloneDeep } from 'lodash/lang';
 import DefaultSlide from './DefaultSlide';
 
 const { width, height } = Dimensions.get('window');
@@ -151,7 +152,7 @@ export default class AppIntroSlider extends React.Component {
       <View style={styles.flexOne}>
         <FlatList
           ref={ref => this.flatList = ref}
-          data={this.props.slides}
+          data={cloneDeep(this.props.slides)}
           horizontal
           pagingEnabled
           showsHorizontalScrollIndicator={false}
